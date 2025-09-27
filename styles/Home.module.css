@@ -792,12 +792,13 @@
   height: 560px;
   border-radius: 36px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  border: 1px solid rgba(200, 200, 200, 0.5);
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.1),
     0 0 0 10px rgba(255, 255, 255, 0.05),
     inset 0 0 0 2px rgba(255, 255, 255, 0.2);
   padding: 12px;
-  transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.38, 1.1), box-shadow 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.38, 1.1), box-shadow 0.4s ease, border-color 0.4s ease;
   overflow: hidden;
   scroll-snap-align: center;
 }
@@ -805,6 +806,7 @@
 @media (prefers-color-scheme: dark) {
   .phoneDevice {
     background: linear-gradient(145deg, #1a1a1a, #252530);
+    border: 1px solid rgba(70, 70, 90, 0.6);
     box-shadow: 
       0 20px 40px rgba(0, 0, 0, 0.3),
       0 0 0 10px rgba(255, 255, 255, 0.02),
@@ -814,11 +816,22 @@
 
 .phoneDevice:hover {
   transform: translateY(-15px) scale(1.03);
+  border-color: rgba(var(--accent-rgb), 0.3);
   box-shadow: 
     0 30px 60px rgba(0, 0, 0, 0.15),
     0 0 0 10px rgba(255, 255, 255, 0.1),
     inset 0 0 0 2px rgba(255, 255, 255, 0.2);
   z-index: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+  .phoneDevice:hover {
+    border-color: rgba(140, 140, 180, 0.5);
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.4),
+      0 0 0 10px rgba(255, 255, 255, 0.03),
+      inset 0 0 0 2px rgba(255, 255, 255, 0.15);
+  }
 }
 
 /* Keep existing phone styling */
