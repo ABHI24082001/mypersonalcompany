@@ -15,6 +15,7 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [totalSlides, setTotalSlides] = useState(2); // Default value
   const phonesContainerRef = useRef(null);
+  const [darkMode, setDarkMode] = useState(false);
 
   // Phone data for the carousel
   const phoneApps = [
@@ -46,7 +47,26 @@ export default function Home() {
     }
   };
 
+  // Function to toggle dark/light mode
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+    if (typeof window !== 'undefined') {
+      document.documentElement.classList.toggle('dark-theme');
+      localStorage.setItem('theme', !darkMode ? 'dark' : 'light');
+    }
+  };
+
   useEffect(() => {
+    // Check for saved theme preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && 
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setDarkMode(true);
+      document.documentElement.classList.add('dark-theme');
+    }
+    
     // Calculate total slides based on screen width - only runs in browser
     const calculateTotalSlides = () => {
       const itemsPerView = window.innerWidth > 768 ? 3 : 1;
@@ -105,8 +125,19 @@ export default function Home() {
       </Head>
 
       <div
-        className={`${styles.page} ${styles.wrapper} ${geistSans.variable} ${geistMono.variable}`}
+        className={`${styles.page} ${styles.wrapper} ${darkMode ? styles.darkMode : styles.lightMode} ${geistSans.variable} ${geistMono.variable}`}
       >
+        {/* Theme Toggle Button */}
+        <button 
+          className={styles.themeToggle}
+          onClick={toggleTheme}
+          aria-label={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        >
+          <span className={styles.themeIcon}>
+            {darkMode ? '☀️' : '🌙'}
+          </span>
+        </button>
+        
         {/* Nav */}
         <nav className={styles.nav}>
           <div className={styles.brand}>
@@ -443,7 +474,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact */}
+        {/* Contact - with enhanced form inputs */}
         <section id="contact" className={`${styles.section} ${styles.contact}`}>
           <h2 className={styles.sectionTitle}>Contact</h2>
           <p className={styles.sectionSub}>Let's discuss your idea</p>
@@ -457,17 +488,17 @@ export default function Home() {
             >
               <label>
                 Name
-                <input type="text" name="name" required />
+                <input type="text" name="name" required placeholder="Your name" />
               </label>
 
               <label>
                 Email
-                <input type="email" name="email" required />
+                <input type="email" name="email" required placeholder="your@email.com" />
               </label>
 
               <label>
                 Message
-                <textarea name="message" rows="5" required />
+                <textarea name="message" rows="5" required placeholder="Tell us about your project..." />
               </label>
 
               <div className={styles.formActions}>

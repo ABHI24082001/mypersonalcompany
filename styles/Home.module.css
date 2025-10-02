@@ -225,7 +225,7 @@
   margin: 0 0 20px;
   line-height: 1.1;
   font-weight: 800;
-  background: linear-gradient(90deg, #000, #333);
+  background: linear-gradient(90deg, #6e6e6e, #5f5f5f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.03em;
@@ -235,7 +235,7 @@
   margin: 0 0 28px;
   font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.6;
-  color: #333;
+  color: #797979;
   font-weight: 400;
 }
 
@@ -390,7 +390,7 @@
 }
 
 .featureCard {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+  background: linear-gradient(145deg, rgba(28, 28, 28, 0.8), rgba(255, 255, 255, 0.6));
   border-radius: 18px;
   padding: 30px;
   min-height: 180px;
@@ -592,30 +592,89 @@
 
 .contactForm input,
 .contactForm textarea {
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  background: transparent;
-  color: var(--text);
-  /* Ensuring input text is visible */
-}
-
-.formActions {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 6px;
-}
-
-.whatsappBtn {
-  background: #25D366;
-  color: #fff;
-  padding: 10px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 12px 14px;
   border-radius: 10px;
-  text-decoration: none;
-  font-weight: 700;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--text);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(14, 165, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .contactForm input,
+  .contactForm textarea {
+    background: rgba(30, 30, 40, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contactForm input:focus,
+  .contactForm textarea:focus {
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.3);
+  }
+}
+
+/* Theme toggle button */
+.themeToggle {
+  position: fixed;
+  top: -8px;
+  right:  -10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--glass);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1300;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.themeToggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.themeIcon {
+  font-size: 20px;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.darkMode {
+  --bg: #060606;
+  --text: #ffffff;
+  --muted: #b0b0b0;
+  --glass: rgba(12, 12, 12, 0.6);
+}
+
+.lightMode {
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #555555;
+  --glass: rgba(255, 255, 255, 0.7);
+}
+
+/* Rotate animation for theme toggle */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.themeToggle:active .themeIcon {
+  animation: rotate 0.5s ease-out;
 }
 
 /* ---------- FOOTER ---------- */
