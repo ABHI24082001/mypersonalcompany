@@ -349,7 +349,7 @@ export default function Home() {
             <article className={styles.projectCard}>
               <div className={styles.projectMedia}>
                 <Image
-                  src="/merchat App.png"
+                  src="/n8n .png"
                   alt="Project 1"
                   width={1200}
                   height={700}
@@ -366,7 +366,7 @@ export default function Home() {
             <article className={styles.projectCard}>
               <div className={styles.projectMedia}>
                 <Image
-                  src="/AI App.jpg"
+                  src="/img.png"
                   alt="Project 2"
                   width={1200}
                   height={700}
