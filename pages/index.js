@@ -433,6 +433,62 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Our Team */}
+        <section id="team" className={`${styles.section} ${styles.team}`}>
+          <h2 className={styles.sectionTitle}>Our Team</h2>
+          <div className={styles.teamContent}>
+            <div className={styles.teamImageContainer}>
+              <div className={styles.teamImage}>
+                <Image
+                  src="/image.jpg"
+                  alt="AbSolution Team"
+                  width={500}
+                  height={350}
+                  className={styles.teamPhoto}
+                />
+                <div className={styles.teamBadge}>2.5+ Years Experience</div>
+              </div>
+              <div className={styles.teamStats}>
+                <div className={styles.statItem}>
+                  <span className={styles.statNumber}>14+</span>
+                  <span className={styles.statLabel}>Projects</span>
+                </div>
+                <div className={styles.statItem}>
+                  <span className={styles.statNumber}>10</span>
+                  <span className={styles.statLabel}>Markets</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className={styles.teamInfo}>
+              <h3>Who We Are</h3>
+              <div className={styles.teamHighlight}>Passionate mobile developers delivering high-performance applications</div>
+              <p>
+                We are a team of passionate mobile app developers with 2.5+ years of experience 
+                delivering user-friendly, high-performance applications for iOS and Android. 
+                Having successfully completed 14+ projects across Arabic and Indian markets, 
+                we specialize in creating solutions that drive efficiency, engagement, and growth.
+              </p>
+              <p>
+                Our expertise spans building feature-rich applications with real-time functionality, 
+                secure integrations, and smooth user journeys. Continuously evolving with new trends 
+                and innovations, we aim to provide businesses with modern, scalable apps that elevate 
+                user satisfaction and operational success.
+              </p>
+              <div className={styles.teamSocials}>
+                <a href="https://www.linkedin.com/company/absolution-design" target="_blank" rel="noreferrer" className={styles.teamSocialButton}>
+                  <span className={styles.socialIcon}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </span>
+                  Connect on LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing */}
         <section id="pricing" className={`${styles.section} ${styles.pricing}`}>
           <h2 className={styles.sectionTitle}>Pricing</h2>
@@ -530,7 +586,12 @@ export default function Home() {
           <div className={styles.footerInner}>
             <p>© {new Date().getFullYear()} AbSolution — App & AI Design</p>
             <div className={styles.socials}>
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <span className={styles.socialIcon}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </span>
                 LinkedIn
               </a>
               <a href="#" aria-label="Twitter">
