@@ -180,7 +180,7 @@ export default function Home() {
           <div className={styles.bannerInner}>
             <div className={styles.bannerMedia}>
               <Image
-                src="/App design.jpg"
+                src="/app.png"
                 alt="Banner — App & AI design"
                 width={1600}
                 height={900}
