@@ -483,7 +483,7 @@ export default function Home() {
               </p>
               <div className={styles.teamSocials}>
                 <a
-                  href="linkedin.com/in/abhishek-kumar-201b91195"
+                  href="https://www.linkedin.com/in/abhishek-kumar-201b91195/"
                   target="_blank"
                   rel="noreferrer"
                   className={styles.teamSocialButton}
