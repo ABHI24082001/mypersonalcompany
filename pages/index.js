@@ -19,7 +19,7 @@ export default function Home() {
 
   // Phone data for the carousel
   const phoneApps = [
-    { id: 1, name: "Social Feed", alt: "Social App UI" , image: "/AI App.jpg"},
+    { id: 1, name: "Social App", alt: "Social App UI" , image: "/AI App.jpg"},
     { id: 2, name: "Shopping App", alt: "E-commerce App UI", image: "/app.jpg" },
     { id: 3, name: "Banking Dashboard", alt: "Finance App UI" , image: "/commerct.jpg"},
     { id: 4, name: "Fitness Tracker", alt: "Fitness App UI" , image: "/food.jpg"},

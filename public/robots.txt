@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://absolutation.vercel.app
+
+# Sitemaps
+Sitemap: https://absolutation.vercel.app/sitemap.xml
