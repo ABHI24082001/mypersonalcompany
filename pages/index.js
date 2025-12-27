@@ -130,13 +130,6 @@ export default function Home() {
         } ${geistSans.variable} ${geistMono.variable}`}
       >
         {/* Theme Toggle Button */}
-        <button
-          className={styles.themeToggle}
-          onClick={toggleTheme}
-          aria-label={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-        >
-          <span className={styles.themeIcon}>{darkMode ? "☀️" : "🌙"}</span>
-        </button>
 
         {/* Nav */}
         <nav className={styles.nav}>
@@ -144,6 +137,16 @@ export default function Home() {
             <div className={styles.logo}>AbSolution</div>
             <div className={styles.tag}>Design • AI • Automation</div>
           </div>
+
+          {/* <button
+            className={styles.themeToggle}
+            onClick={toggleTheme}
+            aria-label={
+              darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"
+            }
+          >
+            <span className={styles.themeIcon}>{darkMode ? "☀️" : "🌙"}</span>
+          </button> */}
 
           <button
             className={styles.hamburger}
@@ -344,6 +347,8 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Project Cards */}
+          <h2 className={styles.sectionTitle}>AI Agent</h2>
           <div className={styles.projectsGrid}>
             {/* Example card 1 */}
             <article className={styles.projectCard}>
