@@ -809,7 +809,8 @@
   color: var(--accent-rgb);
   line-height: 1.6;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 800px;
+  margin-bottom: 150px;
 }
 
 /* Carousel Container & Navigation */
@@ -2161,6 +2162,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+    margin-top: 120px;
   margin: 60px 0;
   perspective: 1200px;
   overflow: visible;
@@ -2360,7 +2362,7 @@
 @media (max-width: 1200px) {
   .modernShowcaseContainer {
     height: 600px;
-    margin: 40px 0;
+    margin-top: 100px;
   }
   
   .modernPhoneDevice {
@@ -2378,6 +2380,7 @@
   .modernShowcaseContainer {
     height: 500px;
     margin: 30px 0;
+    margin-top: 80px;
     perspective: 800px;
   }
   
@@ -2412,6 +2415,7 @@
   .modernShowcaseContainer {
     height: 400px;
     margin: 20px 0;
+    margin-top: 60px;
   }
   
   .modernPhoneDevice {

@@ -382,7 +382,7 @@ export default function Home() {
           >
             <motion.div 
               className={styles.showcaseHeader}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
             >
@@ -391,7 +391,7 @@ export default function Home() {
               </h3>
               <p className={styles.showcaseSubtitle}>
                 Experience our cutting-edge mobile applications with intuitive interfaces,
-                seamless animations, and pixel-perfect execution across all platforms.
+                seamless animations, and pixel-perfect execution across all .
               </p>
             </motion.div>
 
@@ -491,6 +491,9 @@ export default function Home() {
               </motion.a>
             </motion.div>
           </motion.div>
+
+
+          
         </section>
 
         {/* Projects & Products Section - NEW */}
