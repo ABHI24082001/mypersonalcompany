@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content={siteDescription} />
         <meta
           name="keywords"
-          content="AbSolution, Abhishek projects, Next.js developer, React developer, Full Stack Developer, Tech portfolio, Web Development, JavaScript, TypeScript"
+          content="AbSolution, Abhishek Kumar, Full Stack Developer India, Next.js developer, React developer, React Native mobile apps, JavaScript expert, TypeScript developer, Web Development portfolio, Mobile App Development, Progressive Web Apps, MERN Stack, Node.js developer, Frontend developer, Backend developer, API development, Cloud deployment, Vercel hosting, Tech portfolio India, Software engineer portfolio, Modern web applications, Responsive design expert"
         />
 
         {/* Open Graph Meta Tags */}
@@ -30,7 +30,10 @@ export default function App({ Component, pageProps }) {
         <meta property="og:site_name" content="AbSolution" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
-        <meta property="og:image:alt" content="AbSolution Portfolio Preview" />
+        <meta
+          property="og:image:alt"
+          content=" AbSolutation Portfolio Preview"
+        />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/jpeg" />
@@ -42,8 +45,8 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:description" content={siteDescription} />
         <meta name="twitter:image" content={`${siteUrl}/twitter-image.jpg`} />
         <meta name="twitter:image:alt" content="AbSolution Portfolio Preview" />
-        <meta name="twitter:creator" content="@yourusername" />
-        <meta name="twitter:site" content="@yourusername" />
+        <meta name="twitter:creator" content="@Abhishe35257568" />
+        <meta name="twitter:site" content="@Abhishe35257568" />
 
         {/* Additional SEO Meta Tags */}
         <meta name="author" content="Abhishek Kumar" />
@@ -98,9 +101,9 @@ export default function App({ Component, pageProps }) {
 
         {/* Canonical & Links */}
         <link rel="canonical" href={siteUrl} />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/logo.ico" sizes="any" />
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/logo-apple-touch.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link
@@ -119,14 +122,16 @@ export default function App({ Component, pageProps }) {
               "@type": "Person",
               "@id": `${siteUrl}/#person`,
               name: "Abhishek Kumar",
-              alternateName: "AbSolution",
+              alternateName: "AbSolutation",
               url: siteUrl,
               image: `${siteUrl}/profile.jpg`,
               sameAs: [
                 "https://github.com/ABHI24082001",
-                "https://linkedin.com/in/abhishek-kumar-201b91195/",
+                "https://www.linkedin.com/in/abhishek-kumar-201b91195/",
+                "https://x.com/Abhishe35257568",
+                "https://www.reddit.com/user/Abhi123d/",
               ],
-              jobTitle: "Full Stack Developer",
+              jobTitle: "Full Stack Developer & Mobile App Developer",
               description: "Personal and professional project portfolio",
               worksFor: {
                 "@type": "Organization",
@@ -134,10 +139,18 @@ export default function App({ Component, pageProps }) {
               },
               knowsAbout: [
                 "Web Development",
+                "Mobile App Development",
                 "Next.js",
                 "React",
+                "React Native",
                 "JavaScript",
                 "TypeScript",
+                "Node.js",
+                "MERN Stack",
+                "Progressive Web Apps",
+                "API Development",
+                "Cloud Computing",
+                "Full Stack Development",
               ],
             }),
           }}

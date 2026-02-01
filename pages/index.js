@@ -219,7 +219,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>AbSolution — App, Web & AI Design</title>
+        <title>Absolutation — App, Web & AI Design</title>
         <meta
           name="description"
           content="App design, website design, AI agent design, workflow & automation — Joey"
@@ -236,7 +236,7 @@ export default function Home() {
         {/* Nav */}
         <nav className={styles.nav}>
           <div className={styles.brand}>
-            <div className={styles.logo}>AbSolution</div>
+            <div className={styles.logo}>AbSolutation</div>
             <div className={styles.tag}>Design • AI • Automation</div>
           </div>
 
@@ -373,25 +373,30 @@ export default function Home() {
           </p>
 
           {/* Modern Mobile App Showcase */}
-          <motion.div 
+          <motion.div
             ref={showcaseRef}
             className={styles.appShowcase}
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] }}
           >
-            <motion.div 
+            <motion.div
               className={styles.showcaseHeader}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.23, 1, 0.32, 1],
+              }}
             >
               <h3 className={styles.showcaseTitle}>
                 Premium Mobile App Designs
               </h3>
               <p className={styles.showcaseSubtitle}>
-                Experience our cutting-edge mobile applications with intuitive interfaces,
-                seamless animations, and pixel-perfect execution across all .
+                Experience our cutting-edge mobile applications with intuitive
+                interfaces, seamless animations, and pixel-perfect execution
+                across all .
               </p>
             </motion.div>
 
@@ -399,7 +404,7 @@ export default function Home() {
             <div className={styles.modernShowcaseContainer}>
               {phoneApps.map((phone, index) => {
                 const animation = getPhoneAnimation(phone);
-                
+
                 return (
                   <motion.div
                     key={phone.id}
@@ -415,10 +420,25 @@ export default function Home() {
                     animate={animation.animate}
                     transition={animation.transition}
                     whileHover={{
-                      scale: phone.position === "center" ? 1.25 : phone.position.includes("Inner") ? 1.05 : 0.95,
+                      scale:
+                        phone.position === "center"
+                          ? 1.25
+                          : phone.position.includes("Inner")
+                            ? 1.05
+                            : 0.95,
                       rotateY: phone.position === "center" ? 0 : 0,
-                      z: phone.position === "center" ? 120 : phone.position.includes("Inner") ? 60 : 30,
-                      y: phone.position === "center" ? -70 : phone.position.includes("Inner") ? -10 : 30,
+                      z:
+                        phone.position === "center"
+                          ? 120
+                          : phone.position.includes("Inner")
+                            ? 60
+                            : 30,
+                      y:
+                        phone.position === "center"
+                          ? -70
+                          : phone.position.includes("Inner")
+                            ? -10
+                            : 30,
                       transition: { duration: 0.4, ease: "easeOut" },
                     }}
                     style={{
@@ -426,8 +446,8 @@ export default function Home() {
                         phone.position === "center"
                           ? 150
                           : phone.position.includes("Inner")
-                          ? 120
-                          : 100,
+                            ? 120
+                            : 100,
                     }}
                   >
                     {/* Phone Frame */}
@@ -474,13 +494,13 @@ export default function Home() {
             </div>
 
             {/* Showcase CTA */}
-            <motion.div 
+            <motion.div
               className={styles.ctaContainer}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 2, ease: [0.23, 1, 0.32, 1] }}
             >
-              <motion.a 
+              <motion.a
                 href="#contact"
                 className={styles.ctaButton}
                 whileHover={{ scale: 1.05, y: -5 }}
@@ -491,9 +511,6 @@ export default function Home() {
               </motion.a>
             </motion.div>
           </motion.div>
-
-
-          
         </section>
 
         {/* Projects & Products Section - NEW */}
@@ -553,7 +570,7 @@ export default function Home() {
 
           <div className={styles.workflowTimeline}>
             {/* Week 1: Days 1-5 */}
-            <motion.div 
+            <motion.div
               className={styles.timelinePhase}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -564,7 +581,7 @@ export default function Home() {
                 <span className={styles.phaseNumber}>Week 1</span>
                 <span className={styles.phaseDays}>Days 1-5</span>
               </div>
-              
+
               <div className={styles.phaseCards}>
                 <div className={styles.workflowCard}>
                   <div className={styles.cardIcon}>🎯</div>
@@ -593,7 +610,7 @@ export default function Home() {
             </motion.div>
 
             {/* Week 2: Days 6-10 */}
-            <motion.div 
+            <motion.div
               className={styles.timelinePhase}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -604,7 +621,7 @@ export default function Home() {
                 <span className={styles.phaseNumber}>Week 2</span>
                 <span className={styles.phaseDays}>Days 6-10</span>
               </div>
-              
+
               <div className={styles.phaseCards}>
                 <div className={styles.workflowCard}>
                   <div className={styles.cardIcon}>⚡</div>
@@ -633,7 +650,7 @@ export default function Home() {
             </motion.div>
 
             {/* Week 3: Days 11-15 */}
-            <motion.div 
+            <motion.div
               className={styles.timelinePhase}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -644,7 +661,7 @@ export default function Home() {
                 <span className={styles.phaseNumber}>Week 3</span>
                 <span className={styles.phaseDays}>Days 11-15</span>
               </div>
-              
+
               <div className={styles.phaseCards}>
                 <div className={styles.workflowCard}>
                   <div className={styles.cardIcon}>🤖</div>
@@ -673,7 +690,7 @@ export default function Home() {
             </motion.div>
 
             {/* Week 4: Days 16-20 */}
-            <motion.div 
+            <motion.div
               className={styles.timelinePhase}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -684,7 +701,7 @@ export default function Home() {
                 <span className={styles.phaseNumber}>Week 4</span>
                 <span className={styles.phaseDays}>Days 16-20</span>
               </div>
-              
+
               <div className={styles.phaseCards}>
                 <div className={styles.workflowCard}>
                   <div className={styles.cardIcon}>🚀</div>
@@ -755,7 +772,7 @@ export default function Home() {
               <div className={styles.teamImage}>
                 <Image
                   src="/image.jpg"
-                  alt="AbSolution Team"
+                  alt=" AbSolutation Team"
                   width={500}
                   height={350}
                   className={styles.teamPhoto}
@@ -930,7 +947,7 @@ export default function Home() {
         {/* Footer */}
         <footer className={styles.footer}>
           <div className={styles.footerInner}>
-            <p>© {new Date().getFullYear()} AbSolution — App & AI Design</p>
+            <p>© {new Date().getFullYear()} AbSolutation — App & AI Design</p>
             <div className={styles.socials}>
               <a
                 href="https://www.linkedin.com/in/abhishek-kumar-201b91195/"
