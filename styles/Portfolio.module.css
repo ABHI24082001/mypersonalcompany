@@ -1,0 +1,960 @@
+/* Android Phone-Centric Portfolio - Premium Minimal Design */
+
+.page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Hero Section Above Phone */
+.heroAbove {
+  text-align: center;
+  max-width: 900px;
+  margin-bottom: 60px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mainHeadline {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #000000, #4F46E5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mainSubheadline {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainSubheadline strong {
+  color: #000;
+  font-weight: 600;
+}
+
+.skillsBadge {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  border: 1px solid #d1d5db;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 30px;
+}
+
+
+.Badge {
+  display: inline-block;
+  max-width: 620px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #374151;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.ctaPrimary {
+  background: #000;
+  color: #fff;
+}
+
+.ctaPrimary:hover {
+  background: #4F46E5;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.ctaSecondary:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Phone Wrapper */
+.phoneWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Android Phone */
+.androidPhone {
+  width: 380px;
+  height: 780px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.androidPhone:hover {
+  transform: scale(1.02);
+}
+
+.phoneFrame {
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  border-radius: 40px;
+  padding: 8px;
+  box-shadow: 
+    0 0 0 8px #2a2a2a,
+    0 40px 80px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Phone Screens */
+.phoneScreenOff,
+.phoneLockScreen,
+.phoneHomeScreen {
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Screen Off */
+.phoneScreenOff {
+  justify-content: center;
+  align-items: center;
+  background: #0a0a0a;
+}
+
+.tapHint {
+  color: #444;
+  font-size: 13px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* Lock Screen */
+.phoneLockScreen {
+  background: linear-gradient(135deg, #1e1e2e 0%, #2d1b3d 100%);
+  padding: 20px;
+}
+
+.statusBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.statusIcons {
+  display: flex;
+  gap: 6px;
+}
+
+.lockContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.lockTime {
+  font-size: 64px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+}
+
+.lockDate {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.lockForm {
+  width: 100%;
+  max-width: 280px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 32px;
+  text-align: center;
+}
+
+.lockIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.lockForm h3 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.lockForm p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 24px;
+}
+
+.passwordForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.passwordInput {
+  width: 100%;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.passwordInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.unlockBtn {
+  padding: 14px;
+  background: #4F46E5;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.unlockBtn:hover {
+  background: #6366F1;
+  transform: scale(1.02);
+}
+
+/* Home Screen */
+.phoneHomeScreen {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.phoneHomeScreen::-webkit-scrollbar {
+  width: 4px;
+}
+
+.phoneHomeScreen::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.phoneHomeScreen::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+/* Home Widget */
+.homeWidget {
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 16px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.homeWidget h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.homeWidget p {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Apps Grid */
+.appsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 16px;
+}
+
+.appIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.appIcon:active {
+  transform: scale(0.95);
+}
+
+.appIconBox {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.appIcon:hover .appIconBox {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.appEmoji {
+  font-size: 28px;
+}
+
+.appName {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Phone CTA Section */
+.phoneCta {
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 16px 100px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.phoneCta h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.phoneCta p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.phoneCtaButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phoneCtaBtn {
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.phoneCtaBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Android Dock */
+.androidDock {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 19px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(100px); 
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+} 
+
+.dockBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 12px;
+}
+
+.dockBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dockBtn:active {
+  transform: scale(0.95);
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 32px;
+  background: #000;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  z-index: 3000;
+  line-height: 1.5;
+}
+
+/* App Drawer Modal */
+.drawerOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2000;
+  padding: 0;
+}
+
+.appDrawer {
+  width: 100%;
+  max-width: 600px;
+  max-height: 85vh;
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.drawerHandle {
+  width: 40px;
+  height: 4px;
+  background: #d1d5db;
+  border-radius: 10px;
+  margin: 12px auto 8px;
+}
+.profileTitle {
+  text-align: center;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.statCard h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.statCard p {
+  margin-top: 4px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.projects {
+  margin-top: 20px;
+}
+.resumeActions {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0 24px;
+}
+
+.resumeButton {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.resumeButton:hover {
+  transform: translateY(-2px);
+}
+
+.drawerClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.drawerClose:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.drawerContent {
+  overflow-y: auto;
+  max-height: calc(85vh - 40px);
+}
+
+.drawerHeader {
+  padding: 40px 24px 32px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.drawerIcon {
+  font-size: 56px;
+}
+
+.drawerHeader h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.drawerBody {
+  padding: 32px 24px 40px;
+  background: #fff;
+}
+
+/* About Me App Styles */
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.roleTag {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.bio {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.achievements {
+  margin-bottom: 24px;
+}
+
+.achievements h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  padding: 8px 0;
+  font-size: 15px;
+  color: #666;
+}
+
+.skills h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skillTag {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #4F46E5, #6366F1);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Services App Styles */
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.serviceItem {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+  border-radius: 16px;
+  transition: all 0.3s;
+}
+
+.serviceItem:hover {
+  background: linear-gradient(135deg, #4F46E5, #6366F1);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.serviceItem:hover .serviceText h4,
+.serviceItem:hover .serviceText p {
+  color: #fff;
+}
+
+.serviceIcon {
+  font-size: 32px;
+  min-width: 32px;
+}
+
+.serviceText h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.serviceText p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Workflow App Styles */
+.workflowTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  position: relative;
+}
+
+.timelineIcon {
+  font-size: 32px;
+  min-width: 32px;
+}
+
+.timelineContent h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.timelineContent p {
+  font-size: 14px;
+  color: #666;
+}
+
+.timelineConnector {
+  position: absolute;
+  left: 35px;
+  bottom: -20px;
+  font-size: 20px;
+  color: #4F46E5;
+}
+
+/* Contact App Styles */
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.contactItem:hover {
+  background: linear-gradient(135deg, #4F46E5, #6366F1);
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.contactIcon {
+  font-size: 28px;
+}
+
+.contactText {
+  font-size: 16px;
+}
+
+/* Regular App Drawer Styles */
+.appDescription {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.appDetails {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.techStack {
+  margin-bottom: 24px;
+}
+
+.techStack h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techTag {
+  padding: 8px 16px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.visitButton {
+  display: block;
+  padding: 16px 32px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.visitButton:hover {
+  background: #4F46E5;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page {
+    padding: 20px 16px;
+  }
+
+  .heroAbove {
+    margin-bottom: 40px;
+  }
+
+  .mainHeadline {
+    font-size: 32px;
+  }
+
+  .mainSubheadline {
+    font-size: 16px;
+  }
+
+  .androidPhone {
+    width: 340px;
+    height: 700px;
+  }
+
+  .appsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .appDrawer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .androidPhone {
+    width: 320px;
+    height: 660px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+  }
+}
